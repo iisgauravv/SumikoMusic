@@ -24,7 +24,7 @@ from SumikoMusic.helpers.decorators import errors
 from SumikoMusic.services.callsmusic import client as USER
 from SumikoMusic.config import SUDO_USERS
 
-@Client.on_message(filters.command(["userbotjoin"]) & ~filters.private & ~filters.bot)
+@Client.on_message(filters.command(["userbotjoin"]))
 @errors
 async def addchannel(client, message):
     chid = message.chat.id
